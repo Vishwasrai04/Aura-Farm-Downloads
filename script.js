@@ -58,3 +58,20 @@ document.getElementById("yr").textContent = new Date().getFullYear();
   };
   img.src = "assets/hero.png";
 })();
+
+/* Stars in the hero sky (fixed seed, so the sky looks the same on every visit) */
+(function () {
+  var g = document.getElementById("stars");
+  if (!g) return;
+  var seed = 7;
+  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+  var NS = "http://www.w3.org/2000/svg";
+  for (var i = 0; i < 70; i++) {
+    var c = document.createElementNS(NS, "circle");
+    c.setAttribute("cx", (rnd() * 1440).toFixed(0));
+    c.setAttribute("cy", (rnd() * 330).toFixed(0));
+    c.setAttribute("r", (0.5 + rnd() * 1.2).toFixed(2));
+    c.setAttribute("opacity", (0.25 + rnd() * 0.65).toFixed(2));
+    g.appendChild(c);
+  }
+})();
