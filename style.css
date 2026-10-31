@@ -66,6 +66,9 @@ h3{font-size:1.15rem;font-weight:500;line-height:1.25;margin-bottom:6px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;justify-content:center}
 .fine{margin-top:18px;font-size:.92rem;color:var(--muted)}
 
+.dl-info{margin-top:8px;font-size:.88rem;color:var(--muted)}
+.dl-info[hidden]{display:none}
+
 /* sections */
 .sec{padding:112px 0}
 .sec-alt{background:var(--bg2);border-block:1px solid var(--line)}
