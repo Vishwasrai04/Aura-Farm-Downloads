@@ -4,32 +4,63 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aura Farm: Stay in your flow</title>
-<meta name="description" content="Aura Farm is a local-first Windows desktop workspace that keeps your tools, projects, research, notes and assets connected. Free beta.">
-<!-- Private beta: remove this line when you want search engines to list the page -->
+<meta name="description" content="Aura Farm is a local-first Windows desktop workspace that keeps your tools, projects, research, notes and assets together. Free beta.">
+<!-- Invite-only beta: delete the next line when you want search engines to list this page -->
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#EDF1EA">
 <meta property="og:title" content="Aura Farm: Stay in your flow">
 <meta property="og:description" content="Your tools. Your projects. One workspace. Free beta for Windows.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2314b8a6'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%230b1220'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%235FE3C0'/%3E%3Cpath d='M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z' fill='none' stroke='%2312201C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <nav aria-label="Main">
-      <a class="logo" href="#top"><i></i>Aura Farm</a>
-      <div class="links">
-        <a href="#problem">Why</a>
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn primary sm" href="#download">Get the beta</a>
-      </div>
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5FE3C0"/><stop offset=".55" stop-color="#8E7CFF"/><stop offset="1" stop-color="#FFC27A"/>
+    </linearGradient>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h7M9 16h5"/></symbol>
+    <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 16h6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5-5 4 3 3-3 4 4"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><path d="M4 11v2M8 8v8M12 5v14M16 9v6M20 11v2"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 11l5-3v8l-5-3z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></symbol>
+    <symbol id="i-switch" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M5 4v6a3 3 0 003 3h8a3 3 0 013 3v4M5 4h0M19 4v6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#top">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Aura Farm home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="url(#lg)"/><path d="M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z" fill="none" stroke="#12201C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Aura Farm
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#problem">Why</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#who">Who it's for</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <a class="btn btn-dark btn-sm" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest">Download beta</a>
   </div>
 </header>
 
@@ -37,140 +68,249 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="aurora" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="badge"><b>BETA</b> Free early access · Windows</div>
-    <h1>Stay in <span>your flow.</span></h1>
-    <p class="tag">Your tools. Your projects. One workspace.</p>
-    <p class="lead">Bring your research, notes, creative resources, and supported digital tools together, without losing momentum.</p>
-    <div class="cta-row">
-      <a class="btn primary" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/download/v0.1.0-beta/Aura.Farm.Setup.1.0.0-beta.1.exe">⬇ Download for Windows</a>
-      <a class="btn ghost" href="#how">See how it works</a>
-    </div>
-    <p class="fine">Free during beta · Windows 10/11 · Local-first, no account with us required</p>
-
-    <!-- Replace with a real screenshot: save it as assets/hero.png -->
-    <div class="shot" aria-label="Aura Farm workspace">
-      <div class="bar"><i></i><i></i><i></i></div>
-      <div class="ph" aria-hidden="true">
-        <div class="side">
-          <b>Projects</b>
-          <span class="on">The Future of AI</span>
-          <span>Research</span><span>Scripting</span><span>References</span><span>Production</span>
+    <p class="badge"><span class="dot"></span>Free beta for Windows</p>
+    <h1>Stay in your flow.</h1>
+    <div class="hero-grid">
+      <p class="tag">Your tools. Your projects. One workspace.</p>
+      <div class="hero-side">
+        <p class="lead">Bring your research, notes, creative resources, and supported digital tools together, without losing momentum.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
+          <a class="btn btn-line" href="#how">See how it works</a>
         </div>
-        <div class="main">
-          <div class="note">Placeholder: add your real screenshot at assets/hero.png</div>
-          <div>Supported tools workspace</div>
-          <div>Captured notes · source context</div>
+        <p class="fine">Free while in beta. Runs on Windows 10 and 11. No account with us needed.</p>
+      </div>
+    </div>
+
+    <!-- Illustrated product stage: cards start scattered, then settle into project lanes -->
+    <div class="stage" id="stage" data-state="scattered">
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="win-title">The Future of AI</span></div>
+        <div class="win-body">
+          <aside class="side" aria-hidden="true">
+            <span class="side-h">Projects</span>
+            <span class="side-item on"><svg class="i"><use href="#i-folder"/></svg>The Future of AI</span>
+            <span class="side-sub">Research</span>
+            <span class="side-sub">Scripting</span>
+            <span class="side-sub">References</span>
+            <span class="side-sub">Production</span>
+            <span class="side-item"><svg class="i"><use href="#i-folder"/></svg>Study notes</span>
+            <span class="side-item"><svg class="i"><use href="#i-folder"/></svg>Channel ideas</span>
+          </aside>
+          <div class="board" id="board">
+            <span class="lane-h" style="left:2%">Research</span>
+            <span class="lane-h" style="left:35%">Script</span>
+            <span class="lane-h" style="left:68%">Assets</span>
+
+            <article class="card t-chat" style="--sx:52%;--sy:8%;--sr:6deg;--ox:2%;--oy:15%;--d:.00s;--z:3">
+              <span class="ic"><svg class="i"><use href="#i-chat"/></svg></span>
+              <span class="tx"><b>Why chips got small</b><em>Assistant chat</em><span class="chip">Source kept</span></span>
+            </article>
+            <article class="card t-web" style="--sx:6%;--sy:44%;--sr:-8deg;--ox:2%;--oy:41%;--d:.05s;--z:5">
+              <span class="ic"><svg class="i"><use href="#i-web"/></svg></span>
+              <span class="tx"><b>Chip history, an overview</b><em>Reference page</em></span>
+            </article>
+            <article class="card t-note" style="--sx:66%;--sy:48%;--sr:4deg;--ox:2%;--oy:67%;--d:.10s;--z:2">
+              <span class="ic"><svg class="i"><use href="#i-note"/></svg></span>
+              <span class="tx"><b>Open on a lab door</b><em>Rough note</em></span>
+            </article>
+
+            <article class="card t-note" style="--sx:30%;--sy:20%;--sr:-4deg;--ox:35%;--oy:15%;--d:.15s;--z:6">
+              <span class="ic"><svg class="i"><use href="#i-note"/></svg></span>
+              <span class="tx"><b>Draft: cold open</b><em>Script</em></span>
+            </article>
+            <article class="card t-final" style="--sx:64%;--sy:30%;--sr:9deg;--ox:35%;--oy:41%;--d:.20s;--z:4">
+              <span class="ic"><svg class="i"><use href="#i-note"/></svg></span>
+              <span class="tx"><b>Narration, v3</b><em>Selected final</em></span>
+            </article>
+            <article class="card t-pdf" style="--sx:6%;--sy:72%;--sr:5deg;--ox:35%;--oy:67%;--d:.25s;--z:7">
+              <span class="ic"><svg class="i"><use href="#i-pdf"/></svg></span>
+              <span class="tx"><b>Interview transcript</b><em>PDF</em></span>
+            </article>
+
+            <article class="card t-img" style="--sx:38%;--sy:60%;--sr:-9deg;--ox:68%;--oy:15%;--d:.30s;--z:8">
+              <span class="ic"><svg class="i"><use href="#i-image"/></svg></span>
+              <span class="tx"><b>lab-wide.jpg</b><em>Image</em></span>
+            </article>
+            <article class="card t-audio" style="--sx:4%;--sy:10%;--sr:-5deg;--ox:68%;--oy:41%;--d:.35s;--z:1">
+              <span class="ic"><svg class="i"><use href="#i-audio"/></svg></span>
+              <span class="tx"><b>room-tone.wav</b><em>Audio</em></span>
+            </article>
+            <article class="card t-video" style="--sx:66%;--sy:78%;--sr:7deg;--ox:68%;--oy:67%;--d:.40s;--z:9">
+              <span class="ic"><svg class="i"><use href="#i-video"/></svg></span>
+              <span class="tx"><b>broll-clean.mp4</b><em>Video</em></span>
+            </article>
+          </div>
         </div>
       </div>
-      <img src="assets/hero.png" alt="Aura Farm desktop workspace showing a project with sections, notes and assets" onerror="this.remove()">
     </div>
+
+    <div class="stage-ctl">
+      <div class="seg" role="group" aria-label="Preview">
+        <button type="button" data-set="scattered" aria-pressed="false">Without a workspace</button>
+        <button type="button" data-set="ordered" aria-pressed="false">With Aura Farm</button>
+      </div>
+      <p class="cap">Illustration of the idea, using an example documentary project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REAL SCREENSHOT (appears only when assets/hero.png exists) -->
+<section class="real" id="real" hidden>
+  <div class="wrap">
+    <h2>The app itself</h2>
+    <p class="sub">A real screenshot of the current beta.</p>
+    <img id="realimg" alt="Aura Farm desktop app, current beta build" width="1600" height="1000">
   </div>
 </section>
 
 <!-- PROBLEM -->
-<section id="problem" class="alt">
-  <div class="wrap">
-    <span class="eyebrow">The problem</span>
-    <h2>The tools are powerful. The work around them is scattered.</h2>
-    <p class="lead">It isn't a lack of tools. It's the disconnection between tools, information, and resources.</p>
-    <div class="grid g4">
-      <div class="card"><div class="ico">⇄</div><h3>Context switching</h3><p>Work bounces between AI assistants, browser tabs, documents and apps, and focus breaks every time.</p></div>
-      <div class="card"><div class="ico">▦</div><h3>Scattered assets</h3><p>Images, video, audio and PDFs land in disconnected folders you have to hunt through later.</p></div>
-      <div class="card"><div class="ico">✎</div><h3>Lost knowledge</h3><p>Great AI answers, references and ideas get buried in chat history and browsing history.</p></div>
-      <div class="card"><div class="ico">❖</div><h3>Fragmented projects</h3><p>Research, drafts, decisions and files live apart, so resuming a project means rebuilding it.</p></div>
+<section class="sec" id="problem">
+  <div class="wrap split">
+    <div class="split-l">
+      <h2>The tools are powerful. The work around them is scattered.</h2>
+      <p class="sub">It isn't a lack of tools. It's the gaps between tools, information and files.</p>
     </div>
-  </div>
-</section>
-
-<!-- PRODUCT -->
-<section>
-  <div class="wrap center">
-    <span class="eyebrow">Meet Aura Farm</span>
-    <h2>An organized workspace around the tools you already use</h2>
-    <p class="lead">Aura Farm is a local-first desktop workspace for research, creation and organization. It doesn't replace your applications. It gives them a home, so you spend less time managing work and more time doing it.</p>
+    <ul class="rows">
+      <li><span class="rico"><svg class="i"><use href="#i-switch"/></svg></span><div><h3>Context switching</h3><p>Work bounces between AI assistants, browser tabs, documents and apps, and focus breaks every time.</p></div></li>
+      <li><span class="rico"><svg class="i"><use href="#i-grid"/></svg></span><div><h3>Scattered assets</h3><p>Images, video, audio and PDFs land in disconnected folders you have to hunt through later.</p></div></li>
+      <li><span class="rico"><svg class="i"><use href="#i-bulb"/></svg></span><div><h3>Lost knowledge</h3><p>Great answers, references and ideas get buried in chat history and browsing history.</p></div></li>
+      <li><span class="rico"><svg class="i"><use href="#i-split"/></svg></span><div><h3>Fragmented projects</h3><p>Research, drafts, decisions and files live apart, so resuming a project means rebuilding it.</p></div></li>
+    </ul>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="alt">
+<section class="sec sec-tint" id="features">
   <div class="wrap">
-    <span class="eyebrow">What's inside</span>
-    <h2>Four things that keep work connected</h2>
-    <div class="grid g2">
-      <div class="card"><div class="ico">⌘</div><h3>Integrated tools workspace</h3><p>Open supported web and AI tools inside one desktop environment, and keep useful sessions where supported, with fewer browser windows to juggle.</p></div>
-      <div class="card"><div class="ico">▤</div><h3>Projects and sections</h3><p>Group work into projects and sections so research, references, drafts and related activity stay organized around a goal.</p></div>
-      <div class="card"><div class="ico">✦</div><h3>Research capture and notes</h3><p>Capture useful information from supported tool sessions, keep the source context, and turn rough notes into selected final content.</p></div>
-      <div class="card"><div class="ico">⬇</div><h3>Asset and download management</h3><p>Track and organize downloaded images, documents, audio and other files alongside the project they belong to.</p></div>
+    <h2 class="h-wide">An organized workspace around the tools you already use</h2>
+    <p class="sub">Aura Farm doesn't replace your applications. It gives them a home, so you spend less time managing work and more time doing it.</p>
+
+    <div class="bento">
+      <article class="tile t-a">
+        <div class="tile-txt">
+          <h3>Your tools in one window</h3>
+          <p>Open supported web and AI tools inside Aura Farm and keep useful sessions where supported, with fewer browser windows to juggle.</p>
+        </div>
+        <div class="mini" aria-hidden="true">
+          <div class="mtabs"><span class="on">Assistant</span><span>Reference</span><span>Docs</span><span class="plus">+</span></div>
+          <div class="mbody">
+            <div class="bub me"></div>
+            <div class="bub ai"></div>
+            <div class="bub ai s"></div>
+            <div class="mchip">Your own sign-ins</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-b">
+        <div class="tile-txt">
+          <h3>Projects and sections</h3>
+          <p>Group work by goal, so research, references, drafts and production stay together.</p>
+        </div>
+        <ul class="tree" aria-hidden="true">
+          <li class="root"><svg class="i"><use href="#i-folder"/></svg>The Future of AI
+            <ul><li>Research</li><li>Scripting</li><li>References</li><li>Production</li></ul>
+          </li>
+        </ul>
+      </article>
+
+      <article class="tile t-c">
+        <div class="tile-txt">
+          <h3>Capture and notes</h3>
+          <p>Capture from supported tool sessions with the source context attached, then turn rough notes into final content.</p>
+        </div>
+        <div class="snip" aria-hidden="true">
+          <div class="ln w9"></div><div class="ln w7"></div><div class="ln w8"></div>
+          <div class="snip-foot"><span class="chip">Source kept</span>
+            <span class="seg2"><span>Rough</span><span class="on">Final</span></span></div>
+        </div>
+      </article>
+
+      <article class="tile t-d">
+        <div class="tile-txt">
+          <h3>Assets and downloads</h3>
+          <p>Track and organize downloaded images, documents, audio and other files with the project they belong to.</p>
+        </div>
+        <div class="assets" aria-hidden="true">
+          <div class="filters"><span class="on">All</span><span>Images</span><span>Audio</span><span>Documents</span><span>Video</span></div>
+          <div class="thumbs">
+            <span class="th th-img1"></span>
+            <span class="th th-aud"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="th th-doc"><b></b><b></b><b></b></span>
+            <span class="th th-vid"></span>
+            <span class="th th-img2"></span>
+            <span class="th th-doc d2"><b></b><b></b><b></b></span>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how">
+<section class="sec" id="how">
   <div class="wrap">
-    <span class="eyebrow">How it works</span>
     <h2>From idea to organized output</h2>
-    <p class="lead">Example: making a documentary called “The Future of AI.”</p>
-    <div class="steps">
-      <div class="step"><div><b>Create a project</b><p>Add sections for research, scripting, references and production.</p></div></div>
-      <div class="step"><div><b>Explore with supported tools</b><p>Use web tools and AI assistants to dig into ideas and gather references.</p></div></div>
-      <div class="step"><div><b>Capture what matters</b><p>Save important discoveries and keep the source context with them.</p></div></div>
-      <div class="step"><div><b>Refine your notes</b><p>Turn rough notes into the selected final content you'll actually use.</p></div></div>
-      <div class="step"><div><b>Organize your assets, then pick up where you left off</b><p>Keep visuals, audio and documents together, and return to your workspace without reconstructing everything.</p></div></div>
-    </div>
+    <p class="sub">An example: making a documentary called “The Future of AI.”</p>
+    <ol class="timeline">
+      <li><span class="n">1</span><h3>Create a project</h3><p>Add sections for research, scripting, references and production.</p></li>
+      <li><span class="n">2</span><h3>Explore with supported tools</h3><p>Use web tools and AI assistants to dig into ideas and gather references.</p></li>
+      <li><span class="n">3</span><h3>Capture what matters</h3><p>Save important discoveries and keep the source context with them.</p></li>
+      <li><span class="n">4</span><h3>Refine your notes</h3><p>Turn rough notes into the selected final content you'll actually use.</p></li>
+      <li><span class="n">5</span><h3>Organize, then resume</h3><p>Keep visuals, audio and documents together, and come back without reconstructing everything.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- WHO -->
-<section class="alt">
-  <div class="wrap">
-    <span class="eyebrow">Who it's for</span>
-    <h2>Built first for people who juggle a lot of sources</h2>
-    <div class="grid g4">
-      <div class="card"><h3>Creators &amp; editors</h3><p>Scripts, references, footage, audio, thumbnails and production assets.</p></div>
-      <div class="card"><h3>Researchers &amp; writers</h3><p>Sources, findings, outlines, drafts and reference material.</p></div>
-      <div class="card"><h3>Students &amp; learners</h3><p>Study resources, explanations, notes and assignments.</p></div>
-      <div class="card"><h3>Designers &amp; others</h3><p>Visual references, design assets and AI-supported workflows across tools.</p></div>
+<section class="sec sec-tint" id="who">
+  <div class="wrap split">
+    <div class="split-l">
+      <h2>Built first for people who juggle a lot of sources</h2>
+      <p class="sub">We're starting with these groups and will widen once we've learned from real use.</p>
     </div>
+    <ul class="roles">
+      <li><h3>Creators and editors</h3><p>Scripts, references, footage, audio, thumbnails and production assets.</p></li>
+      <li><h3>Researchers and writers</h3><p>Sources, findings, outlines, drafts and reference material.</p></li>
+      <li><h3>Students and learners</h3><p>Study resources, explanations, notes and assignments.</p></li>
+      <li><h3>Designers and other professionals</h3><p>Visual references, design assets and AI-supported workflows across tools.</p></li>
+    </ul>
   </div>
 </section>
 
 <!-- PRINCIPLES -->
-<section>
+<section class="band">
   <div class="wrap">
-    <span class="eyebrow">Principles</span>
     <h2>Simple, and on your side</h2>
-    <div class="grid g3">
-      <div class="card"><h3>Desktop-first</h3><p>A Windows desktop app with an embedded Chromium-based web environment.</p></div>
-      <div class="card"><h3>Local-first</h3><p>Your workspace is stored on your own computer. No hosted account is required to start.</p></div>
-      <div class="card"><h3>Bring your own accounts</h3><p>You sign in to third-party services with your own accounts, subject to each service's rules and support.</p></div>
+    <div class="trio">
+      <div><span class="bico"><svg class="i"><use href="#i-monitor"/></svg></span><h3>Desktop-first</h3><p>A Windows desktop app with an embedded Chromium-based web environment.</p></div>
+      <div><span class="bico"><svg class="i"><use href="#i-lock"/></svg></span><h3>Local-first</h3><p>Your workspace is stored on your own computer. No hosted account is required to start.</p></div>
+      <div><span class="bico"><svg class="i"><use href="#i-user"/></svg></span><h3>Bring your own accounts</h3><p>You sign in to third-party services with your own accounts, subject to each service's rules and support.</p></div>
     </div>
   </div>
 </section>
 
 <!-- DOWNLOAD -->
-<section id="download" class="alt">
+<section class="sec" id="download">
   <div class="wrap">
-    <div class="download">
-      <span class="eyebrow">Free beta</span>
+    <div class="get">
       <h2>Try Aura Farm and tell us what you think</h2>
-      <p class="lead" style="margin:0 auto 28px">You're among the first to use it. Your feedback shapes what comes next.</p>
+      <p class="sub">You're among the first to use it. Your feedback shapes what comes next.</p>
       <div class="cta-row">
-        <a class="btn primary" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/download/v0.1.0-beta/Aura.Farm.Setup.1.0.0-beta.1.exe">⬇ Download for Windows (.exe)</a>
-        <a class="btn ghost" data-feedback href="https://forms.gle/YOUR_FORM_ID">Share feedback</a>
+        <a class="btn btn-dark" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
+        <a class="btn btn-line" data-feedback href="mailto:raivishwas.04@gmail.com?subject=Aura%20Farm%20beta%20feedback"><svg class="i"><use href="#i-mail"/></svg>Share feedback</a>
       </div>
-      <div class="meta">
-        <span>Windows 10 / 11</span>
-        <span>Free during beta</span>
-        <span>Version 0.1.0 beta</span>
-      </div>
+      <p class="fine">Free while in beta. Windows 10 and 11.</p>
     </div>
 
-    <div class="warn" id="faq">
+    <div class="faq" id="faq">
+      <h2 class="faq-h">Questions</h2>
       <details open>
         <summary>Windows says “Windows protected your PC”. Is that normal?</summary>
-        <p>Yes, for this beta. The installer isn't code-signed yet, so Windows SmartScreen shows a warning for new apps. Click <b>More info</b>, then <b>Run anyway</b>. Only install files you downloaded from this page.</p>
+        <p>Yes, for this beta. The installer isn't code-signed yet, so Windows SmartScreen warns about new apps. Click <b>More info</b>, then <b>Run anyway</b>. Only install files you downloaded from this page.</p>
       </details>
       <details>
         <summary>Where is my data stored?</summary>
@@ -181,12 +321,12 @@
         <p>Aura Farm works with supported web and AI tools. Support varies by service and may change, so not every site will behave the same way. Tell us which ones you want next.</p>
       </details>
       <details>
-        <summary>Is there Mac, Linux, or cloud sync?</summary>
+        <summary>Is there a Mac, Linux or cloud sync version?</summary>
         <p>Not yet. This beta is Windows-only and local-first. Other platforms and sharing are things we may explore based on your feedback.</p>
       </details>
       <details>
         <summary>How do I report a problem?</summary>
-        <p>Use the feedback form above or email <a data-email href="mailto:YOUR_EMAIL@example.com" style="color:var(--teal)">YOUR_EMAIL@example.com</a>. Screenshots help a lot.</p>
+        <p>Email <a data-email href="mailto:raivishwas.04@gmail.com">raivishwas.04@gmail.com</a>. Screenshots help a lot.</p>
       </details>
     </div>
   </div>
@@ -194,10 +334,14 @@
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <div><b>Aura Farm</b> · Stay in your flow.</div>
-    <div>© <span id="yr">2026</span> Aura Farm · Beta · Third-party tools belong to their respective owners.</div>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="url(#lg)"/><path d="M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z" fill="none" stroke="#12201C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Aura Farm
+    </a>
+    <p>Stay in your flow. © <span id="yr">2026</span> Aura Farm. Beta. Third-party tools belong to their respective owners.</p>
+    <a class="foot-mail" data-email href="mailto:raivishwas.04@gmail.com">raivishwas.04@gmail.com</a>
   </div>
 </footer>
 
