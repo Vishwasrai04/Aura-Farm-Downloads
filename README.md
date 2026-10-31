@@ -9,8 +9,14 @@ aura-farm-site/
 ├── script.js
 ├── README.md
 └── assets/
-    └── hero.png        <- add your real screenshot (see step 2)
+    ├── setup-welcome.png
+    ├── setup-installing.png
+    ├── setup-done.png
+    ├── og.png              <- link preview image (WhatsApp, LinkedIn, etc.)
+    └── hero.png            <- optional: add a real app screenshot (see step 2)
 ```
+
+**Upload all of these together.** The page needs `index.html`, `style.css`, `script.js` and the `assets` folder in the same repo. If `style.css` is old or missing, the page looks broken.
 
 ## 1. Edit three values
 
