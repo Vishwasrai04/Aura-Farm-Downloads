@@ -7,24 +7,37 @@
 <meta name="description" content="Aura Farm is a local-first Windows desktop workspace that keeps your tools, projects, research, notes and assets together. Free beta.">
 <!-- Invite-only beta: delete the next line when you want search engines to list this page -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#EDF1EA">
+<meta name="theme-color" content="#060B16">
 <meta property="og:title" content="Aura Farm: Stay in your flow">
 <meta property="og:description" content="Your tools. Your projects. One workspace. Free beta for Windows.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%235FE3C0'/%3E%3Cpath d='M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z' fill='none' stroke='%2312201C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta property="og:image" content="https://vishwasrai04.github.io/Aura-Farm-Downloads/assets/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23060B16'/%3E%3Cg transform='translate(14 14) scale(.72)'%3E%3Cpath d='M13 0Q50 46 87 0Z' fill='%23FF8A2B'/%3E%3Cpath d='M13 100Q50 54 87 100Z' fill='%23FF8A2B'/%3E%3Cpath d='M0 9Q58 50 0 91Z' fill='%232A8FD8'/%3E%3Cpath d='M100 9Q42 50 100 91Z' fill='%232A8FD8'/%3E%3Cpath d='M50 38L53 48L63 51L53 54L50 64L47 54L37 51L47 48Z' fill='%23FFC46B'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Icon sprite -->
+<!-- Logo and icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#5FE3C0"/><stop offset=".55" stop-color="#8E7CFF"/><stop offset="1" stop-color="#FFC27A"/>
-    </linearGradient>
+    <linearGradient id="gTop" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B5405A"/><stop offset=".55" stop-color="#FF7A2B"/><stop offset="1" stop-color="#FFB347"/></linearGradient>
+    <linearGradient id="gBot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFB347"/><stop offset=".5" stop-color="#FF7A2B"/><stop offset="1" stop-color="#6B3B8C"/></linearGradient>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2FA8EA"/><stop offset=".55" stop-color="#1B62AC"/><stop offset="1" stop-color="#0B2B58"/></linearGradient>
+    <linearGradient id="gBlueR" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FA8EA"/><stop offset=".55" stop-color="#1B62AC"/><stop offset="1" stop-color="#0B2B58"/></linearGradient>
+    <radialGradient id="gStar"><stop offset="0" stop-color="#FFD28A" stop-opacity=".95"/><stop offset=".4" stop-color="#FF9B3D" stop-opacity=".4"/><stop offset="1" stop-color="#FF8A2B" stop-opacity="0"/></radialGradient>
+    <symbol id="logo" viewBox="0 0 100 100">
+      <path d="M13 0Q50 46 87 0Z" fill="url(#gTop)"/>
+      <path d="M13 100Q50 54 87 100Z" fill="url(#gBot)"/>
+      <path d="M0 9Q58 50 0 91Z" fill="url(#gBlue)"/>
+      <path d="M100 9Q42 50 100 91Z" fill="url(#gBlueR)"/>
+      <path d="M0 9Q58 50 0 91" fill="none" stroke="#7FD6FF" stroke-opacity=".55" stroke-width="1"/>
+      <path d="M100 9Q42 50 100 91" fill="none" stroke="#7FD6FF" stroke-opacity=".55" stroke-width="1"/>
+      <circle cx="50" cy="51" r="17" fill="url(#gStar)"/>
+      <path d="M50 38L52.6 48.4L63 51L52.6 53.6L50 64L47.4 53.6L37 51L47.4 48.4Z" fill="#FFD28A"/>
+    </symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/></symbol>
     <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
     <symbol id="i-note" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h7M9 16h5"/></symbol>
@@ -36,7 +49,7 @@
     <symbol id="i-switch" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
     <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></symbol>
-    <symbol id="i-split" viewBox="0 0 24 24"><path d="M5 4v6a3 3 0 003 3h8a3 3 0 013 3v4M5 4h0M19 4v6"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M5 4v6a3 3 0 003 3h8a3 3 0 013 3v4M19 4v6"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
     <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
@@ -50,17 +63,17 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Aura Farm home">
-      <svg class="mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="url(#lg)"/><path d="M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z" fill="none" stroke="#12201C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Aura Farm
+      <svg class="mark" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="wm">AURA <b>FARM</b></span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#problem">Why</a>
+      <a href="#what">What it is</a>
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="#who">Who it's for</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-dark btn-sm" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest">Download beta</a>
+    <a class="btn btn-fire btn-sm" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest">Download beta</a>
   </div>
 </header>
 
@@ -68,23 +81,51 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="aurora" aria-hidden="true"></div>
-  <div class="wrap">
+  <svg class="scape" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="rb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F7FD0"/><stop offset=".38" stop-color="#2AA6E8"/><stop offset=".7" stop-color="#FF8A2B"/><stop offset="1" stop-color="#FFC46B"/></linearGradient>
+      <linearGradient id="mFar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16294F"/><stop offset="1" stop-color="#070D1C"/></linearGradient>
+      <linearGradient id="mNear" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1428"/><stop offset="1" stop-color="#060B16"/></linearGradient>
+      <radialGradient id="horizon" cx=".5" cy="1" r=".6"><stop offset="0" stop-color="#FF8A2B" stop-opacity=".55"/><stop offset=".5" stop-color="#FF8A2B" stop-opacity=".12"/><stop offset="1" stop-color="#FF8A2B" stop-opacity="0"/></radialGradient>
+      <filter id="blur" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    </defs>
+    <g id="stars"></g>
+    <rect x="0" y="260" width="1440" height="500" fill="url(#horizon)"/>
+    <path d="M0 520 L110 440 L200 490 L330 370 L450 480 L560 410 L680 505 L800 385 L930 480 L1060 360 L1180 470 L1300 415 L1440 490 V760 H0Z" fill="url(#mFar)"/>
+    <path d="M0 520 L110 440 L200 490 L330 370 L450 480 L560 410 L680 505 L800 385 L930 480 L1060 360 L1180 470 L1300 415 L1440 490" fill="none" stroke="#FF8A2B" stroke-opacity=".22" stroke-width="1.5"/>
+    <g class="drift">
+      <path d="M-80 575 C 220 480, 440 660, 760 575 S 1200 465, 1520 555" fill="none" stroke="url(#rb)" stroke-width="16" opacity=".42" filter="url(#blur)"/>
+      <path d="M-80 575 C 220 480, 440 660, 760 575 S 1200 465, 1520 555" fill="none" stroke="url(#rb)" stroke-width="3" opacity=".95"/>
+    </g>
+    <g class="drift d2">
+      <path d="M-80 618 C 260 556, 520 700, 820 615 S 1230 535, 1520 605" fill="none" stroke="url(#rb)" stroke-width="2" opacity=".6"/>
+      <path d="M-80 535 C 300 618, 560 498, 860 556 S 1240 616, 1520 520" fill="none" stroke="url(#rb)" stroke-width="1.5" opacity=".5"/>
+    </g>
+    <path d="M0 640 L140 575 L260 628 L420 555 L560 636 L720 570 L880 645 L1040 575 L1180 640 L1320 588 L1440 632 V760 H0Z" fill="url(#mNear)"/>
+  </svg>
+
+  <div class="wrap hero-in">
+    <svg class="hero-mark" width="96" height="96" viewBox="0 0 100 100" role="img" aria-label="Aura Farm logo"><use href="#logo"/></svg>
     <p class="badge"><span class="dot"></span>Free beta for Windows</p>
     <h1>Stay in your flow.</h1>
-    <div class="hero-grid">
-      <p class="tag">Your tools. Your projects. One workspace.</p>
-      <div class="hero-side">
-        <p class="lead">Bring your research, notes, creative resources, and supported digital tools together, without losing momentum.</p>
-        <div class="cta-row">
-          <a class="btn btn-dark" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
-          <a class="btn btn-line" href="#how">See how it works</a>
-        </div>
-        <p class="fine">Free while in beta. Runs on Windows 10 and 11. No account with us needed.</p>
-      </div>
+    <p class="tag">Your tools. Your projects. One workspace.</p>
+    <p class="lead">Bring your research, notes, creative resources, and supported digital tools together, without losing momentum.</p>
+    <div class="cta-row">
+      <a class="btn btn-fire" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
+      <a class="btn btn-ghost" href="#what">What is Aura Farm?</a>
+    </div>
+    <p class="fine">Free while in beta. Runs on Windows 10 and 11. No account with us needed.</p>
+  </div>
+</section>
+
+<!-- WHAT IT IS: illustrated workspace -->
+<section class="sec stage-sec" id="what">
+  <div class="wrap">
+    <div class="intro">
+      <h2>One workspace for everything behind your work</h2>
+      <p class="sub">When you work on a project, research ends up in browser tabs, ideas in AI chats, notes somewhere else and downloads across folders. Aura Farm is a desktop app that keeps them together, project by project.</p>
     </div>
 
-    <!-- Illustrated product stage: cards start scattered, then settle into project lanes -->
     <div class="stage" id="stage" data-state="scattered">
       <div class="win">
         <div class="win-bar"><i></i><i></i><i></i><span class="win-title">The Future of AI</span></div>
@@ -167,7 +208,7 @@
 </section>
 
 <!-- PROBLEM -->
-<section class="sec" id="problem">
+<section class="sec sec-alt" id="problem">
   <div class="wrap split">
     <div class="split-l">
       <h2>The tools are powerful. The work around them is scattered.</h2>
@@ -183,9 +224,9 @@
 </section>
 
 <!-- FEATURES -->
-<section class="sec sec-tint" id="features">
+<section class="sec" id="features">
   <div class="wrap">
-    <h2 class="h-wide">An organized workspace around the tools you already use</h2>
+    <h2 class="h-wide">Four things that keep your work connected</h2>
     <p class="sub">Aura Farm doesn't replace your applications. It gives them a home, so you spend less time managing work and more time doing it.</p>
 
     <div class="bento">
@@ -197,9 +238,7 @@
         <div class="mini" aria-hidden="true">
           <div class="mtabs"><span class="on">Assistant</span><span>Reference</span><span>Docs</span><span class="plus">+</span></div>
           <div class="mbody">
-            <div class="bub me"></div>
-            <div class="bub ai"></div>
-            <div class="bub ai s"></div>
+            <div class="bub me"></div><div class="bub ai"></div><div class="bub ai s"></div>
             <div class="mchip">Your own sign-ins</div>
           </div>
         </div>
@@ -224,8 +263,7 @@
         </div>
         <div class="snip" aria-hidden="true">
           <div class="ln w9"></div><div class="ln w7"></div><div class="ln w8"></div>
-          <div class="snip-foot"><span class="chip">Source kept</span>
-            <span class="seg2"><span>Rough</span><span class="on">Final</span></span></div>
+          <div class="snip-foot"><span class="chip">Source kept</span><span class="seg2"><span>Rough</span><span class="on">Final</span></span></div>
         </div>
       </article>
 
@@ -250,6 +288,28 @@
   </div>
 </section>
 
+<!-- SETUP SCREENS -->
+<section class="sec sec-alt" id="install">
+  <div class="wrap">
+    <h2>From download to your first project</h2>
+    <p class="sub">Setup is a short guided installer for Windows.</p>
+    <div class="shots">
+      <figure>
+        <img src="assets/setup-welcome.png" width="538" height="446" alt="Aura Farm setup welcome screen with four options: Organize Your Tools, Manage Projects, Capture Ideas and Keep Your Flow">
+        <figcaption><span class="n">1</span><div><h3>Start the setup</h3><p>A short welcome shows what Aura Farm helps you do.</p></div></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/setup-installing.png" width="483" height="446" alt="Aura Farm setup showing an installation progress bar">
+        <figcaption><span class="n">2</span><div><h3>Let it install</h3><p>Setup runs and shows its progress.</p></div></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/setup-done.png" width="481" height="446" alt="Aura Farm setup showing Installation Complete with a Launch Aura Farm button">
+        <figcaption><span class="n">3</span><div><h3>Launch and begin</h3><p>Open Aura Farm and start your first project.</p></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section class="sec" id="how">
   <div class="wrap">
@@ -266,7 +326,7 @@
 </section>
 
 <!-- WHO -->
-<section class="sec sec-tint" id="who">
+<section class="sec sec-alt" id="who">
   <div class="wrap split">
     <div class="split-l">
       <h2>Built first for people who juggle a lot of sources</h2>
@@ -282,7 +342,7 @@
 </section>
 
 <!-- PRINCIPLES -->
-<section class="band">
+<section class="sec" id="principles">
   <div class="wrap">
     <h2>Simple, and on your side</h2>
     <div class="trio">
@@ -294,14 +354,15 @@
 </section>
 
 <!-- DOWNLOAD -->
-<section class="sec" id="download">
+<section class="sec sec-alt" id="download">
   <div class="wrap">
     <div class="get">
+      <svg class="get-mark" width="84" height="84" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>
       <h2>Try Aura Farm and tell us what you think</h2>
       <p class="sub">You're among the first to use it. Your feedback shapes what comes next.</p>
       <div class="cta-row">
-        <a class="btn btn-dark" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
-        <a class="btn btn-line" data-feedback href="mailto:raivishwas.04@gmail.com?subject=Aura%20Farm%20beta%20feedback"><svg class="i"><use href="#i-mail"/></svg>Share feedback</a>
+        <a class="btn btn-fire" data-download href="https://github.com/Vishwasrai04/Aura-Farm-Downloads/releases/latest"><svg class="i"><use href="#i-download"/></svg>Download for Windows</a>
+        <a class="btn btn-ghost" data-feedback href="mailto:raivishwas.04@gmail.com?subject=Aura%20Farm%20beta%20feedback"><svg class="i"><use href="#i-mail"/></svg>Share feedback</a>
       </div>
       <p class="fine">Free while in beta. Windows 10 and 11.</p>
     </div>
@@ -337,8 +398,8 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <a class="brand" href="#top" aria-label="Back to top">
-      <svg class="mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="url(#lg)"/><path d="M16 24v-7M16 17c0-4 3-6 7-6 0 4-3 6-7 6zM16 19c0-3-2-5-6-5 0 3 2 5 6 5z" fill="none" stroke="#12201C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Aura Farm
+      <svg class="mark" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="wm">AURA <b>FARM</b></span>
     </a>
     <p>Stay in your flow. © <span id="yr">2026</span> Aura Farm. Beta. Third-party tools belong to their respective owners.</p>
     <a class="foot-mail" data-email href="mailto:raivishwas.04@gmail.com">raivishwas.04@gmail.com</a>
